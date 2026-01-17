@@ -3,7 +3,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #1a1a1a;
+    background-color: #2c3e50;
     font-family: 'Segoe UI', sans-serif;
     margin: 0;
 }
@@ -11,43 +11,72 @@ body {
 .container {
     text-align: center;
     background: #ffffff;
-    padding: 40px;
-    border-radius: 20px;
-    box-shadow: 0 15px 35px rgba(0,0,0,0.5);
-    width: 300px;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+    width: 320px;
+}
+
+h1 {
+    color: #34495e;
+    margin-bottom: 10px;
 }
 
 #display {
-    font-size: 48px;
-    margin: 20px 0;
-    color: #222;
-    font-family: monospace;
+    font-size: 50px;
+    margin-bottom: 25px;
+    color: #333;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
 }
 
 .controls button {
-    padding: 10px 15px;
+    padding: 12px 20px;
     margin: 5px;
+    font-size: 16px;
+    cursor: pointer;
     border: none;
     border-radius: 5px;
-    cursor: pointer;
+    transition: 0.3s;
     font-weight: bold;
-    transition: 0.2s;
 }
 
-#startPause { background-color: #2ecc71; color: white; }
-button:nth-child(2) { background-color: #3498db; color: white; }
-button:last-child { background-color: #e74c3c; color: white; }
+/* Start/Pause Button Color */
+#startPause {
+    background-color: #27ae60;
+    color: white;
+}
+
+/* Lap Button Color */
+button:nth-child(2) {
+    background-color: #3498db;
+    color: white;
+}
+
+/* Reset Button Color */
+button:last-child {
+    background-color: #e74c3c;
+    color: white;
+}
+
+button:hover {
+    opacity: 0.8;
+}
 
 #lapsList {
-    margin-top: 20px;
-    padding: 0;
     list-style: none;
+    padding: 0;
+    margin-top: 20px;
     max-height: 150px;
     overflow-y: auto;
+    text-align: left;
 }
 
 #lapsList li {
-    padding: 8px;
-    border-bottom: 1px solid #eee;
-    color: #555;
+    background: #f8f9fa;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+    border-left: 5px solid #3498db;
+    font-size: 14px;
 }
